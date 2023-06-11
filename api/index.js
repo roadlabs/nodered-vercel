@@ -3,12 +3,12 @@ const express = require("express");
 const RED = require("node-red");
 
 var app = express();
-app.use("/", express.static("public"));
+app.use("/api", express.static("public"));
 var server = http.createServer(app);
 
 var settings = {
-	httpAdminRoot: "/",
-	httpNodeRoot: "/",
+	httpAdminRoot: "/api",
+	httpNodeRoot: "/api",
 	userDir: ".",
 	flowFile: "flows.json",
 	credentialSecret: false,
